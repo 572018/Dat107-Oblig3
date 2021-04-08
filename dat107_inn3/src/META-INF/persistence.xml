@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="FirmaUnit" transaction-type="RESOURCE_LOCAL">
+	
+		<class>komponenter.AnsattProsjekt</class>
+		<class>komponenter.Prosjekt</class>
+		<class>komponenter.Ansatt</class>
+		<class>komponenter.Avdeling</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		 
+		<properties>
+		    <!--  Generelle JPA properties -->
+		    <property name="eclipselink.logging.level" value="FINE"/>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://data1.hib.no:5434/h572018" />
+			<property name="javax.persistence.jdbc.user" value="h572018" />
+			<property name="javax.persistence.jdbc.password" value="pass314" />
+			
+			<!--  EclipseLink properties -->
+            <!--  Se https://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging -->
+            <property name="eclipselink.logging.level" value="WARNING"/>
+		</properties>
+		
+	</persistence-unit>
+</persistence> 
